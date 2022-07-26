@@ -17,6 +17,10 @@ export default {
   display: flex;
   line-height: 44px;
   text-align: center;
+  width: 100%;
+  background-color: var(--color-tint);
+
+  color: #fff;
 }
 .nav-bar .left,
 .nav-bar .right {

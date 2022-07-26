@@ -25,11 +25,7 @@ export default {
     },
   },
 
-  mounted() {
-    setInterval(() => {
-      console.log(this.recommend);
-    }, 1000);
-  },
+  mounted() {},
 
   methods: {},
 };

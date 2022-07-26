@@ -77,3 +77,11 @@ ul {
 a {
   text-decoration: none;
 }
+
+a {
+  vertical-align: middle;
+}
+
+img {
+  vertical-align: middle;
+}

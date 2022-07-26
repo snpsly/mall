@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li v-for="(item, index) in sz" @click="cli(index)" :key="item.fon">
-      <router-link :to="item.to"
+      <router-link :to="item.to" replace
         ><TabBarItem>
           <img
             :src="item.img"

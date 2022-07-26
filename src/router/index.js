@@ -27,6 +27,10 @@ export default new Router({
       path: '/profilt',
       name: 'profilt',
       component: () => import('@/views/me/profilt')
+    }, {
+      path: '/detail/:iid',
+      name: 'profilt',
+      component: () => import('@/views/detail/detail')
     },
   ],
   mode: 'history'
