@@ -1,7 +1,7 @@
-import { request } from '@/network/request'
+import request from '@/network/request'
 export function getDetailData(iid) {
   return request({
-    url: '/detail'
+    url: '/detail/'
     , params: {
       iid
     }

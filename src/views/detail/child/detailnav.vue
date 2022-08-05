@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavBar class="navbar">
+    <nav-bar class="navbar">
       <template slot="left">
         <div @click="back">
           <img src="@/assets/img/common/back.svg" alt="" /></div
@@ -16,7 +16,7 @@
           </div>
         </div>
       </template>
-    </NavBar>
+    </nav-bar>
   </div>
 </template>
 

@@ -2,7 +2,7 @@
   <ul>
     <li v-for="(item, index) in sz" @click="cli(index)" :key="item.fon">
       <router-link :to="item.to" replace
-        ><TabBarItem>
+        ><tab-bar-item>
           <img
             :src="item.img"
             alt=""
@@ -19,7 +19,7 @@
           />
           <span slot="font" :class="{ cli: index === indexs }">{{
             item.fon
-          }}</span></TabBarItem
+          }}</span></tab-bar-item
         ></router-link
       >
     </li>

@@ -1,10 +1,10 @@
 <template>
   <div>
-    <Swiper>
-      <SwiperItem v-for="(item, index) in topimg" :key="index">
+    <swiper>
+      <swiper-item v-for="(item, index) in topimg" :key="index">
         <img :src="item" alt="" @load="imgload" />
-      </SwiperItem>
-    </Swiper>
+      </swiper-item>
+    </swiper>
   </div>
 </template>
 

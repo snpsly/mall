@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Swiper>
-      <SwiperItem v-for="(item, index) in banner" :key="index">
+    <swiper>
+      <swiper-item v-for="(item, index) in banner" :key="index">
         <a :href="item.link">
           <img :src="item.image" alt="" @load="imgload" />
         </a>
-      </SwiperItem>
-    </Swiper>
+      </swiper-item>
+    </swiper>
   </div>
 </template>
 

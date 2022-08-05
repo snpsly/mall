@@ -1,15 +1,15 @@
 <template>
   <div class="home">
-    <NavBar>
+    <nav-bar>
       <template v-slot:center> 购物街 </template>
-    </NavBar>
-    <TabControl
+    </nav-bar>
+    <tab-control
       :titles="['流行', '新款', '精选']"
       :class="{ hometabcon: this.positiony + this.TabControly <= 0 }"
       v-show="this.positiony + this.TabControly <= 0"
       @index="index"
       ref="TabControl1"
-    ></TabControl>
+    ></tab-control>
     <scroll
       class="wrapper"
       ref="scroll"
@@ -19,19 +19,19 @@
       @pullUpLoad="pullUpLoad"
     >
       <childswiper :banner="banner" @imgload="swiperimgload"></childswiper>
-      <HomeRound :recommend="recommend"></HomeRound>
+      <home-round :recommend="recommend"></home-round>
       <dKeyword></dKeyword>
-      <TabControl
+      <tab-control
         :titles="['流行', '新款', '精选']"
         @index="index"
         ref="TabControl2"
-      ></TabControl>
-      <GoodsList :goods="goods[category[index_category]].data"></GoodsList>
+      ></tab-control>
+      <goods-list :goods="goods[category[index_category]].data"></goods-list>
     </scroll>
-    <BackTop
+    <back-top
       @click.native="backtop"
       v-show="positiony < -1000 ? true : false"
-    ></BackTop>
+    ></back-top>
   </div>
 </template>
 
@@ -46,6 +46,7 @@ import scroll from "@/components/common/scroll/scroll";
 import BackTop from "@/components/content/backtop/BackTop";
 import { getHomeMultiData, getHomeGoods } from "@/network/home/home";
 import { mixin } from "@/components/content/mixin";
+
 export default {
   name: "index",
   components: {
@@ -56,6 +57,7 @@ export default {
     TabControl,
     GoodsList,
     scroll,
+
     BackTop,
   },
   mixins: [mixin],

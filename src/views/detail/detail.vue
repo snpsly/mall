@@ -13,12 +13,12 @@
       <imglist :imglist="imglist" @imgload="imgload"></imglist>
       <rule :rule="rule" :set="set" ref="rule"></rule>
       <rate :rate="rate" ref="rate"></rate>
-      <GoodsList :goods="recommend" ref="GoodsList"></GoodsList>
+      <goods-list :goods="recommend" ref="GoodsList"></goods-list>
     </scroll>
-    <BackTop
+    <back-top
       @click.native="backtop"
       v-show="positiony < -1000 ? true : false"
-    ></BackTop>
+    ></back-top>
     <bottombar @addtocart="addtocart"></bottombar>
   </div>
 </template>
@@ -36,8 +36,9 @@ import rate from "@/views/detail/child/rate";
 import GoodsList from "@/components/content/goods/GoodsList";
 import { mixin } from "@/components/content/mixin";
 import bottombar from "@/views/detail/child/bottombar";
-import BackTop from "@/components/content/backtop/BackTop";
+
 import { mapActions } from "vuex";
+import BackTop from "@/components/content/backtop/BackTop.vue";
 export default {
   name: "Detail",
   components: {

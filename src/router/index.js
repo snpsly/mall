@@ -28,6 +28,7 @@ export default new Router({
       name: 'profilt',
       component: () => import('@/views/me/profilt')
     }, {
+      //动态路由
       path: '/detail/:iid',
       name: 'profilt',
       component: () => import('@/views/detail/detail')
